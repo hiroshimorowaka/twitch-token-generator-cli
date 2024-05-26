@@ -1,3 +1,6 @@
+.vscode
+dist
+node_modules
 twitch_token_cli.exe
 sea-prep.blob
 twitch_token_someu.js

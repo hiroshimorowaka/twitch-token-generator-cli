@@ -1,13 +1,25 @@
 {
-  "name": "twitch-token",
+  "name": "twitch-token-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "twitch_token_cli.js",
+  "main": "src/index.ts",
+  "type": "module",
   "scripts": {
-    "start": "node twitch_token_cli.js",
-    "build": "node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath, 'twitch_token_cli.exe')\" && npx postject twitch_token_cli.exe NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2"
+    "lint:check": "bunx @biomejs/biome check ./src",
+    "lint:fix": "bunx @biomejs/biome check --apply ./src",
+    "dev": "bun run src/index.ts",
+    "build": "tsc && node dist/index.js",
+    "build:windows": "tsc && node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath, 'twitch_token_cli.exe')\" && npx postject twitch_token_cli.exe NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.7.3",
+    "@types/node": "^20.12.12"
+  }
 }

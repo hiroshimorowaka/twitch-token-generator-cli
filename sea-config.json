@@ -1,1 +1,1 @@
-{ "main": "twitch_token_cli.js", "output": "sea-prep.blob" }
+{ "main": "dist/index.js", "output": "sea-prep.blob" }
