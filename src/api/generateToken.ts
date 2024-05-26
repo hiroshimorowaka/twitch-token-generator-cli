@@ -1,3 +1,4 @@
+import color from "picocolors";
 export async function generateToken(clientId: string, clientSecret: string) {
 	try {
 		const response = await fetch(
@@ -16,8 +17,8 @@ export async function generateToken(clientId: string, clientSecret: string) {
 		if (response.status === 200) {
 			return `Your app token is: ${responseBody.token}`;
 		}
-		return `API Error: ${JSON.stringify(responseBody)}`;
+		return color.red(`API Error: ${JSON.stringify(responseBody)}`);
 	} catch (error) {
-		return "Fetch error, please try again later";
+		return color.red("Fetch error, please try again later");
 	}
 }
