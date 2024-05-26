@@ -1,13 +1,13 @@
 # Twitch Token Generator CLI
 
-Node version: 20.11.0
+Node version: lts/iron
 
-Um script ULTRA simples pra uso pessoal. 
+A dead-simple Twitch Token Generator Tool
 
-Basicamente faz as requisições pra API da twitch pra gerar e revogar um App Token.
+You can revoke or generate a token without the need for HTTP request apps or suspicious websites
 
-Dá pra usar com `node run start` ou criando sua própria build pra um arquivo executável `npm run build`
+You can clone the project and run it on your own machine. I used bun in the project to use Typescript without transpiling, but if you use NodeJS, you can build the project and run it with the command `npm run build`.
 
-Você pode baixar o arquivo `.exe` que eu mesmo buildei direto na aba [release](https://github.com/hiroshimorowaka/twitch-token-generator-cli/releases) do github
+You can build your own version for Windows using `npm run build:windows` or download it from `Releases` 
 
-O arquivo `.exe` foi gerado usando o próprio node, caso queira ler a [documentação](https://nodejs.org/docs/latest/api/single-executable-applications.html#single-executable-applications), fique a vontade.
+And that's it, enjoy!
